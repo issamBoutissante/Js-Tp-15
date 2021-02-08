@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tp 15</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Informations de payement</legend>
+        <table cellpadding="8px" width="700px">
+          <tr>
+            <td>Nom et prenom client :</td>
+            <td><input type="text" id="nom" /></td>
+          </tr>
+          <tr>
+            <td>Votre Adresse :</td>
+            <td colspan="2"><input type="text" id="adresse" size="58" /></td>
+          </tr>
+          <tr>
+            <td>Telephone : (+212)</td>
+            <td>
+              <input type="tel" id="tel" /> Date d'operation :
+              <input type="date" id="date" />
+            </td>
+          </tr>
+          <tr>
+            <td>Type de payements :</td>
+            <td>
+              <input
+                type="radio"
+                name="type"
+                checked
+                id="paypal"
+                value="paypal"
+              />Paypal
+              <img src="./paypal.png" alt="paypal" height="15px" />
+              <input type="radio" name="type" id="carteBancaire" />Carte
+              bancaire
+              <img src="./mastercard.png" alt="mastercard" height="15px" />
+            </td>
+          </tr>
+          <tr class="paypal">
+            <td>Votre adresse Email:</td>
+            <td colspan="2"><input type="email" size="58" id="email" /></td>
+          </tr>
+          <tr class="paypal">
+            <td>Mot de passe:</td>
+            <td><input type="password" id="motPass" /></td>
+          </tr>
+          <tr class="carteBancaire">
+            <td>Type de carte :</td>
+            <td>
+              <select id="typeCarte" style="width: 80px">
+                <option value="visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+              </select>
+              Numero de carte : <input type="text" id="numCarte" />
+            </td>
+          </tr>
+          <tr class="carteBancaire">
+            <td>Expiration fin :</td>
+            <td>
+              <input type="number" style="width: 60px" id="mois" />
+              <input type="number" style="width: 60px" id="anne" />
+              Code verification : <input type="text" id="verification" />
+            </td>
+          </tr>
+        </table>
+        <table width="700px">
+          <tr>
+            <td><button id="effacer" />Effacer</td>
+            <td><button id="valider" />valider</td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+  <script src="./index.js"></script>
+</html>
